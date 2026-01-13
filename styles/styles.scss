@@ -1,0 +1,31 @@
+$page-background: #A2AF95;
+$main-text: #3F3A50;
+
+$main-font: Arial;
+
+
+*{
+    background-color: $page-background;
+    color: $main-text;
+    font-family: $main-font;
+}
+
+header{
+    img{
+
+    }
+
+    a{
+        padding: 1rem 2.5rem;
+
+        &:hover{
+            zoom: 1.5;
+        }
+    }
+}
+
+main{
+    background-color: #2E340E;
+    height: 800px;
+    margin: 2rem;
+}
