@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   background-color: #A2AF95;
   color: #3F3A50;
@@ -12,7 +13,7 @@ header a:hover {
 }
 
 main {
-  background-color: #DAC8BE;
-  height: 750px;
+  background: url("../public/portefølje_bakgrunn.png") no-repeat center/cover;
+  height: 800px;
   margin: 2rem;
 }/*# sourceMappingURL=styles.css.map */
