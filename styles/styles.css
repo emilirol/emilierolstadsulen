@@ -13,7 +13,7 @@ header a:hover {
 }
 
 main {
-  background: url("../public/portefølje_bakgrunn.png") no-repeat center/cover;
+  background: #DAC8BE url("../public/portefølje_bakgrunn.png") no-repeat center/cover;
   height: 800px;
   margin: 2rem;
 }/*# sourceMappingURL=styles.css.map */
