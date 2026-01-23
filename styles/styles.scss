@@ -1,19 +1,17 @@
 $page-background: #A2AF95;
-$main-text: #3F3A50;
+$main-text-color: #3F3A50;
 
+$header-font: "Pixelify Sans", sans-serif;
 $main-font: Arial;
 
 
 *{
     background-color: $page-background;
-    color: $main-text;
+    color: $main-text-color;
     font-family: $main-font;
 }
 
 header{
-    img{
-
-    }
 
     a{
         padding: 1rem 2.5rem;
@@ -21,11 +19,32 @@ header{
         &:hover{
             zoom: 1.5;
         }
+
+        font-family: $header-font;
     }
+
+    
 }
 
+#front_page{
+        background: #DAC8BE url("../public/portefølje_bakgrunn.png") no-repeat center/cover;
+        height: 800px;
+    }
+
 main{
-    background: #DAC8BE url("../public/portefølje_bakgrunn.png") no-repeat center/cover;
-    height: 800px;
+    
     margin: 2rem;
+
+    h1{
+        font-family: $header-font;
+    }
+
+    #about{
+        background: $page-background;
+    }
+
+    #about-image{
+        width: 14rem;
+        border-radius: 50%;
+        }
 }
