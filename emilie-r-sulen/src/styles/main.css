@@ -87,7 +87,9 @@ header a:hover {
 main {
   margin: 2rem;
 }
-main h1 {
+main h1,
+main h2,
+main h3 {
   font-family: "Pixelify Sans", sans-serif;
 }
 

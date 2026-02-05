@@ -1,24 +1,35 @@
+import React from "react"
 import { Link } from "react-router-dom"
 import "../../styles/main.css"
+import Header from "../../assets/components/Header/Header.jsx"
+import Footer from "../../assets/components/Footer/Footer.jsx"
 
 export default function About(){
     return (
         <>
-            <header className="site-header">
-                <Link to="/" className="site-header__link">
-                <img className="logo" src="" alt="" />
-                Hjem
-                </Link>
-                <Link className="zoom-out" to="/about">Om meg</Link>
-                <Link className="zoom-out" to="/contact">Kontakt meg</Link>
-                <Link className="zoom-out" to="/projects">Prosjekter</Link>
-            </header>
+            <Header />
             <main id="about">
                 <h1 id="name">Emilie Rolstad Sulen</h1>
-                <p>
-                    
-                </p>
-                
+                    <p>
+                        Hei! 
+                        Jeg er Emilie, webutvikler og sykepleier. 
+                        Min lidenskap er å utvikle brukervennlige sider, med et kreativt og personlig utrykk.
+                        Når jeg ikke koder, bruker jeg tiden min på familien, leser en bok, strikker eller gamer. 
+                    </p>
+                <h2>Erfaring</h2>
+                <h3>Utdannelse</h3>
+                    <ul>
+                        <li>2023 - 2026 : Bachelor i webutvikling</li>
+                        <li>2013 - 2016 : Bachelor i sykepleie</li>
+                        <li>2019 - 2021 : Videreutdannelse i psykisk helsearbeid</li>
+                    </ul>
+                <h3>Jobb erfaring</h3>
+                    <ul>
+                        <li>2025 : Praksis IT utvikler</li>
+                        <li>2021 - 2023 : Spesialsykepleier</li>
+                        <li>2016 - 2021 : Sykepleier</li>
+                    </ul>
+
                 <img id="about-image" srcset="../public/profile_picture.webp" alt="Image of girl with glasses with a heart" loading="lazy" sizes=""/>
                 <div class="animals">
                     <p>
@@ -45,10 +56,7 @@ export default function About(){
                     </p>
                 </div>
             </main>
-            <footer>
-                <p>Created by Emilie Rolstad Sulen</p>
-                <p>&copy; 2026 Emilie Rolstad Sulen</p>
-            </footer>
+            <Footer />
         </>
     )
 }
