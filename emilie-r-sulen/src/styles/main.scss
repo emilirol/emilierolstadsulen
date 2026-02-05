@@ -1,6 +1,6 @@
-$page-background: #A2AF95;
+$page-background: #DAC8BE;
 $main-text-color: #3F3A50;
-$card-color: #DAC8BE;
+$card-color:  #A2AF95;
 
 $header-font: "Pixelify Sans", sans-serif;
 $main-font: Arial;
@@ -31,11 +31,13 @@ header{
 
 
 #front_page{
-        background: $card-color url("../public/portefølje_bakgrunn.webp") no-repeat center/cover;
+        
+        background: $page-background url("../public/portefølje_bakgrunn.webp") no-repeat center/contain;
         min-height: clamp(320px, 80vh, 1100px);
         
 
         #diplom{
+            
             width: 15rem;
             border: solid 6px #b6a708;;
             display: flex;
@@ -71,6 +73,7 @@ header{
 
             img{
                 height: 15rem;
+                
             }
 
             p{

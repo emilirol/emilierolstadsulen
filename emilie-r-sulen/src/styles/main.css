@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: #A2AF95;
+  background-color: #DAC8BE;
 }
 
 header a {
@@ -17,7 +17,7 @@ header a:hover {
 }
 
 #front_page {
-  background: #DAC8BE url("../public/portefølje_bakgrunn.webp") no-repeat center/cover;
+  background: #DAC8BE url("../public/portefølje_bakgrunn.webp") no-repeat center/contain;
   min-height: clamp(320px, 80vh, 1100px);
 }
 #front_page #diplom {
@@ -92,7 +92,7 @@ main h1 {
 }
 
 #about {
-  background: #A2AF95;
+  background: #DAC8BE;
   padding: 3rem;
   display: grid;
   gap: 1.5rem;
@@ -125,7 +125,7 @@ main h1 {
 #about .nurse,
 #about .family,
 #about .small-farm {
-  background: #DAC8BE;
+  background: #A2AF95;
   border-radius: 10px;
 }
 #about .animals p,
@@ -142,4 +142,4 @@ main h1 {
     grid-template-columns: 1fr;
     grid-template-areas: "name" "image" "animals" "nurse" "family" "farm";
   }
-}/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=main.css.map */
