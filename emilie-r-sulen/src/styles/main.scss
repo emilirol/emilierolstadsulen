@@ -1,0 +1,176 @@
+$page-background: #DAC8BE;
+$main-text-color: #3F3A50;
+$card-color:  #A2AF95;
+
+$header-font: "Pixelify Sans", sans-serif;
+$main-font: Arial;
+
+
+*{
+    color: $main-text-color;
+    font-family: $main-font;
+}
+
+body{
+        background-color: $page-background;
+}
+
+header{
+
+    a{
+        padding: 1rem 2.5rem;
+
+        &:hover{
+            zoom: 1.5;
+        }
+
+        font-family: $header-font;
+    } 
+}
+
+
+
+#front_page{
+        
+        background: $page-background url("/images/portefølje_bakgrunn.webp") no-repeat center/contain;
+        min-height: clamp(320px, 80vh, 1100px);
+        
+
+        #diplom{
+            
+            width: 15rem;
+            border: solid 6px #b6a708;;
+            display: flex;
+            flex-direction: row-reverse;
+            position: relative;
+            top: 400px;
+            left: 1200px;
+
+            transition: transform 1s;
+            overflow: hidden;
+            border-radius: 8px;
+
+            &::before{
+                content: "";
+                position: absolute;
+                inset: -150;
+                pointer-events: none;
+
+                background: linear-gradient(
+                45deg,
+                transparent 43%,
+                rgba(255, 255, 255, 0.0) 47%,
+                rgba(255, 255, 255, 0.95) 50%,
+                rgba(255, 255, 255, 0.0) 53%,
+                transparent 57%
+                );
+
+                transform: translate(-60%, -60%);
+                animation: borderShine 3s ease-in-out infinite;
+            }
+
+            animation: borderGlow 3s ease-in-out infinite;
+
+            img{
+                height: 15rem;
+                
+            }
+
+            p{
+                font-family: $header-font;
+                font-weight: bold;
+                font-size: 2.5rem;
+                display: flex;
+                position: relative;
+            }
+        }
+
+        @keyframes borderShine{
+            0%   { transform: translate(-60%, -60%); opacity: 0; }
+            10%  { opacity: 1; }
+            60%  { transform: translate(60%, 60%); opacity: 1; }
+            100% { transform: translate(60%, 60%); opacity: 0; }
+        }
+
+        @keyframes borderGlow{
+            0%   { border-color: #b6a708; }
+            50%  { border-color: #f4e00b; }
+            100% { border-color: #b6a708; }
+        }
+
+        #diplom:hover{
+            transform: scale(1.1);
+
+        }
+    }
+
+main{
+    
+    margin: 2rem;
+
+    h1,
+    h2,
+    h3{
+        font-family: $header-font;
+    }
+       
+    
+}
+
+#about{
+    background: $page-background;
+
+    padding: 3rem;
+
+    display: grid;
+    gap: 1.5rem;
+
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        "name name animals animals"
+        "image family family nurse"
+        ". farm farm .";
+
+
+    #name { grid-area: name; }
+    #about-image { grid-area: image; }
+    .animals     { grid-area: animals; }
+    .nurse       { grid-area: nurse; }
+    .family      { grid-area: family; }
+    .small-farm  { grid-area: farm; }
+    
+    #about-image{
+        width: 14rem;
+        border-radius: 50%;
+        }
+
+
+    .animals,
+    .nurse,
+    .family,
+    .small-farm{
+        background: $card-color;
+        border-radius: 10px;
+
+        p{
+            padding: 1.5rem;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    
+}
+
+@media (max-width: 800px) {
+  #about {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "name"
+        "image"
+        "animals"
+        "nurse"
+        "family"
+        "farm";
+  }
+}
