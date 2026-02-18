@@ -1,0 +1,147 @@
+@charset "UTF-8";
+* {
+  color: #3F3A50;
+  font-family: Arial;
+}
+
+body {
+  background-color: #DAC8BE;
+}
+
+header a {
+  padding: 1rem 2.5rem;
+  font-family: "Pixelify Sans", sans-serif;
+}
+header a:hover {
+  zoom: 1.5;
+}
+
+#front_page {
+  background: #DAC8BE url("/images/portefølje_bakgrunn.webp") no-repeat center/contain;
+  min-height: clamp(320px, 80vh, 1100px);
+}
+#front_page #diplom {
+  width: 15rem;
+  border: solid 6px #b6a708;
+  display: flex;
+  flex-direction: row-reverse;
+  position: relative;
+  top: 400px;
+  left: 1200px;
+  transition: transform 1s;
+  overflow: hidden;
+  border-radius: 8px;
+  animation: borderGlow 3s ease-in-out infinite;
+}
+#front_page #diplom::before {
+  content: "";
+  position: absolute;
+  inset: -150;
+  pointer-events: none;
+  background: linear-gradient(45deg, transparent 43%, rgba(255, 255, 255, 0) 47%, rgba(255, 255, 255, 0.95) 50%, rgba(255, 255, 255, 0) 53%, transparent 57%);
+  transform: translate(-60%, -60%);
+  animation: borderShine 3s ease-in-out infinite;
+}
+#front_page #diplom img {
+  height: 15rem;
+}
+#front_page #diplom p {
+  font-family: "Pixelify Sans", sans-serif;
+  font-weight: bold;
+  font-size: 2.5rem;
+  display: flex;
+  position: relative;
+}
+@keyframes borderShine {
+  0% {
+    transform: translate(-60%, -60%);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  60% {
+    transform: translate(60%, 60%);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(60%, 60%);
+    opacity: 0;
+  }
+}
+@keyframes borderGlow {
+  0% {
+    border-color: #b6a708;
+  }
+  50% {
+    border-color: #f4e00b;
+  }
+  100% {
+    border-color: #b6a708;
+  }
+}
+#front_page #diplom:hover {
+  transform: scale(1.1);
+}
+
+main {
+  margin: 2rem;
+}
+main h1,
+main h2,
+main h3 {
+  font-family: "Pixelify Sans", sans-serif;
+}
+
+#about {
+  background: #DAC8BE;
+  padding: 3rem;
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas: "name name animals animals" "image family family nurse" ". farm farm .";
+}
+#about #name {
+  grid-area: name;
+}
+#about #about-image {
+  grid-area: image;
+}
+#about .animals {
+  grid-area: animals;
+}
+#about .nurse {
+  grid-area: nurse;
+}
+#about .family {
+  grid-area: family;
+}
+#about .small-farm {
+  grid-area: farm;
+}
+#about #about-image {
+  width: 14rem;
+  border-radius: 50%;
+}
+#about .animals,
+#about .nurse,
+#about .family,
+#about .small-farm {
+  background: #A2AF95;
+  border-radius: 10px;
+}
+#about .animals p,
+#about .nurse p,
+#about .family p,
+#about .small-farm p {
+  padding: 1.5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 800px) {
+  #about {
+    grid-template-columns: 1fr;
+    grid-template-areas: "name" "image" "animals" "nurse" "family" "farm";
+  }
+}/*# sourceMappingURL=main.css.map */
