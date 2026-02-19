@@ -1,8 +1,8 @@
 import React from "react"
 import { Link } from "react-router-dom"
 import "../../styles/main.css"
-import Header from "../../assets/components/Header/Header.jsx"
-import Footer from "../../assets/components/Footer/Footer.jsx"
+import Header from "../../components/Header/Header.jsx"
+import Footer from "../../components/Footer/Footer.jsx"
 
 export default function About(){
     return (
@@ -40,33 +40,33 @@ export default function About(){
                         <img className="" srcSet="/icons/html-icon.png" alt="HTML Icon" loading="lazy" sizes=""/>
                         <img className="" srcSet="/icons/css-icon.png" alt="CSS Icon" loading="lazy" sizes=""/>
                         <img className="" srcSet="/icons/javascript-icon.png" alt="JavaScript Icon" loading="lazy" sizes=""/>
-                        <img className="" srcset="/icons/python-icon.png" alt="Python Icon" loading="" sizes="" />
-                        <img className="" srcset="/icons/php-icon.png" alt="PHP Icon" loading="" sizes="" />
-                        <img className="" srcset="/icons/csharp-icon.png" alt="C# Icon" loading="" sizes="" />
-                        <img className="" srcset="/icons/sql-icon.png" alt="SQL Icon" loading="" sizes="" />
+                        <img className="" srcSet="/icons/python-icon.png" alt="Python Icon" loading="" sizes="" />
+                        <img className="" srcSet="/icons/php-icon.png" alt="PHP Icon" loading="" sizes="" />
+                        <img className="" srcSet="/icons/csharp-icon.png" alt="C# Icon" loading="" sizes="" />
+                        <img className="" srcSet="/icons/sql-icon.png" alt="SQL Icon" loading="" sizes="" />
 
                 </div>
                 <div>
                     <h4>Frontend og backend</h4>
-                        <img className="" srcset="/icons/react-icon.png" alt="React Icon" loading="" sizes="" />
-                        <img className="" srcset="/icons/svelte-icon.png" alt="Svelte Icon" loading="" sizes="" />
-                        <img className="" srcset="/icons/sass-icon.png" alt="SASS Icon" loading="" sizes="" />
-                        <img className="" srcset="/icons/node.js-icon.png" alt="Node.js Icon" loading="" sizes="" />
-                        <img className="" srcset="/icons/express-icon.png" alt="Express Icon" loading="" sizes="" />
-                        <img className="" srcset="/icons/.net-icon.png" alt=".NET Icon" loading="" sizes="" />
+                        <img className="" srcSet="/icons/react-icon.png" alt="React Icon" loading="" sizes="" />
+                        <img className="" srcSet="/icons/svelte-icon.png" alt="Svelte Icon" loading="" sizes="" />
+                        <img className="" srcSet="/icons/sass-icon.png" alt="SASS Icon" loading="" sizes="" />
+                        <img className="" srcSet="/icons/node.js-icon.png" alt="Node.js Icon" loading="" sizes="" />
+                        <img className="" srcSet="/icons/express-icon.png" alt="Express Icon" loading="" sizes="" />
+                        <img className="" srcSet="/icons/.net-icon.png" alt=".NET Icon" loading="" sizes="" />
                 </div>
                 <div>
                     <h4>Andre verktøy</h4>
-                        <img className="" srcset="/icons/vscode-icon.png" alt="Visual Studio Code Icon" loading="" sizes="" />
-                        <img className="" srcset="/icons/visualstudio-icon.png" alt="Visual Studio Icon" loading="" sizes="" />
-                        <img className="" srcset="/icons/github-icon.png" alt="GitHub Icon" loading="" sizes="" />
-                        <img className="" srcset="/icons/terminal-icon.png" alt="Terminal Icon" loading="" sizes="" />
-                        <img className="" srcset="/icons/figma-icon.png" alt="Figma Icon" loading="" sizes="" />
-                        <img className="" srcset="/icons/docker-icon.png" alt="Docker Icon" loading="" sizes="" />
-                        <img className="" srcset="/icons/mongodb-icon.png" alt="Mongo DB Icon" loading="" sizes="" />
-                        <img className="" srcset="/icons/postgresql-icon.png" alt="PostgreSQL Icon" loading="" sizes="" />
-                        <img className="" srcset="/icons/mysql-icon.png" alt="MySQL Icon" loading="" sizes="" />
-                        <img className="" srcset="/icons/elasticsearch-icon.webp" alt="Elasticsearch Icon" loading="" sizes="" />
+                        <img className="" srcSet="/icons/vscode-icon.png" alt="Visual Studio Code Icon" loading="" sizes="" />
+                        <img className="" srcSet="/icons/visualstudio-icon.png" alt="Visual Studio Icon" loading="" sizes="" />
+                        <img className="" srcSet="/icons/github-icon.png" alt="GitHub Icon" loading="" sizes="" />
+                        <img className="" srcSet="/icons/terminal-icon.png" alt="Terminal Icon" loading="" sizes="" />
+                        <img className="" srcSet="/icons/figma-icon.png" alt="Figma Icon" loading="" sizes="" />
+                        <img className="" srcSet="/icons/docker-icon.png" alt="Docker Icon" loading="" sizes="" />
+                        <img className="" srcSet="/icons/mongodb-icon.png" alt="Mongo DB Icon" loading="" sizes="" />
+                        <img className="" srcSet="/icons/postgresql-icon.png" alt="PostgreSQL Icon" loading="" sizes="" />
+                        <img className="" srcSet="/icons/mysql-icon.png" alt="MySQL Icon" loading="" sizes="" />
+                        <img className="" srcSet="/icons/elasticsearch-icon.webp" alt="Elasticsearch Icon" loading="" sizes="" />
                 </div>
 
                 <img id="about-image" srcSet="/images/profile_picture.webp" alt="Image of girl with glasses with a heart" loading="lazy" sizes=""/>

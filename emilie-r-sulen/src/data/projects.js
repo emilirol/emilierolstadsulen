@@ -1,14 +1,31 @@
-export const projectsPrew = [
+export const projects = [
     {
     slug: "pawpartner",              // brukes i URL/routing og som unik id
     title: "Pawpartner - Web of Things høst 2025",
     image: "/project-images/pawpartner-logo.webp", // kan være path eller importert bilde
-    shortDescription: "Pawpartner en web of things aktivitets tracker laget for å skape en bedre rellasjon mellom hund og eier.",
+    shortDescription: "Pawpartner, aktivitettrackeren utviklet med fokus på rellasjon mellom hund og eier.",
     fullDescription: "",
     technologies: ["JavaScript", "HTML", "CSS", "Micro:Bit"], // "used technologies"
     githubUrl: "https://github.com/emilirol/WoT-Dogtracker",
     liveUrl: "",
-    collaborations: ["Camilla Borgos", "Emma Mathea Simensen", "Mia Sanne-Larsen", "Madeleine Lyseggen Aas"], // eller tom []
+    collaborations: [
+      { name:"Camilla Borgos",
+        linkedin: "https://www.linkedin.com/in/camillaborgos/",
+        github:""
+      },
+      { name:"Emma Mathea Simensen",
+        linkedin: "https://www.linkedin.com/in/emma-mathea-simensen/",
+        github:""
+      },
+      { name:"Mia Sanne-Larsen",
+        linkedin: "https://www.linkedin.com/in/mia-sanne-larsen-528aa8387/",
+        github:""
+      },
+      { name:"Madeleine Lyseggen Aas",
+        linkedin: "https://www.linkedin.com/in/madeleine-lyseggen-aas/",
+        github:""
+      },
+      ] // eller tom []
   },
   {
     slug: "chatwidget",              // brukes i URL/routing og som unik id
@@ -30,6 +47,19 @@ export const projectsPrew = [
     technologies: ["React", "Node.js", "Express", "MongoDB", "Docker", "GitHub Actions"], // "used technologies"
     githubUrl: "https://github.com/sabria23/Idg2671-project",
     liveUrl: "https://group4.sustainability.it.ntnu.no/login",
-    collaborations: ["Modesta Trakselyte", "Sabrina Altahrawi", "Marius Sandvik Bjørnstad" ], // eller tom []
+    collaborations: [
+      { name: "Modesta Trakselyte",
+        linkedin: "https://www.linkedin.com/in/",
+        github: "",
+      },
+      { name:"Sabrina Altahrawi",
+        linkedin: "https://www.linkedin.com/in/",
+        github: "",
+      },
+      { name: "Marius Sandvik Bjørnstad",
+        linkedin: "https://www.linkedin.com/in/",
+        github: "",
+      },
+      ] // eller tom []
   },
-]
+];
