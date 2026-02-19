@@ -1,8 +1,8 @@
 import React from "react"
 import { Link } from "react-router-dom"
 import "../../styles/main.css"
-import Header from "../../assets/components/Header/Header.jsx"
-import Footer from "../../assets/components/Footer/Footer.jsx"
+import Header from "../../components/Header/Header.jsx"
+import Footer from "../../components/Footer/Footer.jsx"
 
 export default function Contact(){
     return (
