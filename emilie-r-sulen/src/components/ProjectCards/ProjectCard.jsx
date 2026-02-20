@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 
 export default function ProjectCard({ project }) {
   return (
-    <article className="">
+    <div className="">
       <h3>{project.title}</h3>
-      <img src={project.image} alt={project.title} />
+      <img src={project.thumbnail} alt={project.title} />
       <ul>
         {project.technologies?.map((tech) =>
           <li key={tech}>{tech}</li>
@@ -14,8 +14,8 @@ export default function ProjectCard({ project }) {
       <p>{project.shortDescription}</p>
 
       <Link to={`/projects/${project.slug}`}>
-        <button>Les mer</button>
+        <button className="">Les mer</button>
       </Link>
-    </article>
+    </div>
   );
 }

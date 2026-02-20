@@ -35,7 +35,7 @@ export default function About(){
                 </div>
 
                 <h3>Teknologier</h3>
-                <div>
+                <div className="">
                     <h4>Programmeringsspråk</h4>
                         <img className="" srcSet="/icons/html-icon.png" alt="HTML Icon" loading="lazy" sizes=""/>
                         <img className="" srcSet="/icons/css-icon.png" alt="CSS Icon" loading="lazy" sizes=""/>
@@ -46,7 +46,7 @@ export default function About(){
                         <img className="" srcSet="/icons/sql-icon.png" alt="SQL Icon" loading="" sizes="" />
 
                 </div>
-                <div>
+                <div className="">
                     <h4>Frontend og backend</h4>
                         <img className="" srcSet="/icons/react-icon.png" alt="React Icon" loading="" sizes="" />
                         <img className="" srcSet="/icons/svelte-icon.png" alt="Svelte Icon" loading="" sizes="" />
@@ -55,7 +55,7 @@ export default function About(){
                         <img className="" srcSet="/icons/express-icon.png" alt="Express Icon" loading="" sizes="" />
                         <img className="" srcSet="/icons/.net-icon.png" alt=".NET Icon" loading="" sizes="" />
                 </div>
-                <div>
+                <div className="">
                     <h4>Andre verktøy</h4>
                         <img className="" srcSet="/icons/vscode-icon.png" alt="Visual Studio Code Icon" loading="" sizes="" />
                         <img className="" srcSet="/icons/visualstudio-icon.png" alt="Visual Studio Icon" loading="" sizes="" />
