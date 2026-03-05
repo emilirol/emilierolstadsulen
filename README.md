@@ -1,2 +1,2 @@
 # emilierolstadsulen
-The portfolio of Emilie Rolstad Sulen
+The portfolio of emilierolstadsulen. All images, illustrations and words &copy; Emilie Rolstad Sulen
