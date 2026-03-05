@@ -1,102 +1,173 @@
-import React from "react"
-import { Link } from "react-router-dom"
-import "../../styles/main.css"
-import Header from "../../components/Header/Header.jsx"
-import Footer from "../../components/Footer/Footer.jsx"
+import React from "react";
+import "../../styles/main.css";
+import Header from "../../components/Header/Header.jsx";
+import Footer from "../../components/Footer/Footer.jsx";
+import { PiLegoSmileyFill } from "react-icons/pi";
+import { FaUserNurse } from "react-icons/fa";
 
-export default function About(){
-    return (
-        <>
-            <Header />
-            <main id="about">
-                <h1 id="name">Hvem er jeg?</h1>
-                    <p>
-                        Hei! 
-                        Jeg er Emilie, webutvikler og sykepleier. 
-                        Min lidenskap er å utvikle brukervennlige sider, med et kreativt og personlig utrykk.
-                        Når jeg ikke koder, bruker jeg tiden min på familien, leser en bok, strikker eller gamer. 
-                    </p>
-                <h2>Erfaring</h2>
-                <div>
+export default function About() {
+    const birthDate = new Date(1992, 7, 7); 
+    const today = new Date();
+
+    let age = today.getFullYear() - birthDate.getFullYear();
+    const monthDifference = today.getMonth() - birthDate.getMonth();
+    
+    if (
+        monthDifference < 0 ||
+        (monthDifference === 0 && today.getDate() < birthDate.getDate())
+    ) {
+        age--;
+    };
+
+    const sonBDay = new Date (2021, 10, 25);
+    let sonAge = today.getFullYear() - sonBDay.getFullYear();
+    const sonMonthDifference = today.getMonth() - sonBDay.getMonth();
+
+    if (
+        sonMonthDifference < 0 ||
+        (sonMonthDifference === 0 && today.getDate() < sonBDay.getDate())
+    ) {
+        sonAge--;
+    };
+
+  const skills = {
+    programmeringssprak: [
+      { label: "HTML", src: "/icons/html-icon.png" },
+      { label: "CSS", src: "/icons/css-icon.png" },
+      { label: "JavaScript", src: "/icons/javascript-icon.png" },
+      { label: "Python", src: "/icons/python-icon.png" },
+      { label: "PHP", src: "/icons/php-icon.png" },
+      { label: "C#", src: "/icons/csharp-icon.png" },
+      { label: "SQL", src: "/icons/sql-icon.png" },
+    ],
+    frontendBackend: [
+      { label: "React", src: "/icons/react-icon.png" },
+      { label: "Svelte", src: "/icons/svelte-icon.png" },
+      { label: "Sass", src: "/icons/sass-icon.png" },
+      { label: "Node.js", src: "/icons/node.js-icon.png" },
+      { label: "Express", src: "/icons/express-icon.png" },
+      { label: ".NET", src: "/icons/.net-icon.png" },
+    ],
+    andreVerktoy: [
+      { label: "VS Code", src: "/icons/vscode-icon.png" },
+      { label: "Visual Studio", src: "/icons/visualstudio-icon.png" },
+      { label: "GitHub", src: "/icons/github-icon.png" },
+      { label: "Terminal", src: "/icons/terminal-icon.png" },
+      { label: "Figma", src: "/icons/figma-icon.png" },
+      { label: "Docker", src: "/icons/docker-icon.png" },
+      { label: "MongoDB", src: "/icons/mongodb-icon.png" },
+      { label: "PostgreSQL", src: "/icons/postgresql-icon.png" },
+      { label: "MySQL", src: "/icons/mysql-icon.png" },
+      { label: "Elasticsearch", src: "/icons/elasticsearch-icon.webp" },
+    ],
+  };
+
+  const renderIcons = (items) => (
+    <div className="skills__icons">
+      {items.map((item) => (
+        <div key={item.label} className="icon__wrapper">
+          <img
+            className="teknologispråk"
+            src={item.src}
+            alt={`${item.label} ikon`}
+            loading="lazy"
+          />
+          <span className="icon__text">{item.label}</span>
+        </div>
+      ))}
+    </div>
+  );
+
+  return (
+    <>
+      <Header />
+      <main id="about">
+        <h1 id="name">Hvem er jeg?</h1>
+        <div className="about__personal">
+            <img
+                id="about-image"
+                srcSet="/images/profile_picture.webp"
+                alt="Image of girl with glasses with a heart"
+                loading="lazy"
+                sizes=""
+            />
+
+            <p>
+                Hei! Jeg er Emilie, {age} år, webutvikler og sykepleier. Min lidenskap
+                er å utvikle brukervennlige websider og applikasjoner, med et kreativt og personlig utrykk.
+                Når jeg ikke koder, bruker jeg tiden min på familien, leser en bok,
+                strikker eller gamer.
+            </p>
+        </div>
+
+        <div className="experience__container">
+            <h2 >Erfaring</h2>
+            <div className="experience__education">
                 <h3>Utdannelse</h3>
                     <ul>
                         <li>2023 - 2026 : Bachelor i webutvikling</li>
                         <li>2013 - 2016 : Bachelor i sykepleie</li>
                         <li>2019 - 2021 : Videreutdannelse i psykisk helsearbeid</li>
                     </ul>
-
-                
+            </div>
+            <div className="experience__work">
                 <h3>Jobb erfaring</h3>
                     <ul>
                         <li>2025 : Praksis IT utvikler</li>
                         <li>2021 - 2023 : Spesialsykepleier</li>
                         <li>2016 - 2021 : Sykepleier</li>
                     </ul>
-                </div>
+            </div>
+        </div>
 
-                <h3>Teknologier</h3>
-                <div className="">
-                    <h4>Programmeringsspråk</h4>
-                        <img className="" srcSet="/icons/html-icon.png" alt="HTML Icon" loading="lazy" sizes=""/>
-                        <img className="" srcSet="/icons/css-icon.png" alt="CSS Icon" loading="lazy" sizes=""/>
-                        <img className="" srcSet="/icons/javascript-icon.png" alt="JavaScript Icon" loading="lazy" sizes=""/>
-                        <img className="" srcSet="/icons/python-icon.png" alt="Python Icon" loading="" sizes="" />
-                        <img className="" srcSet="/icons/php-icon.png" alt="PHP Icon" loading="" sizes="" />
-                        <img className="" srcSet="/icons/csharp-icon.png" alt="C# Icon" loading="" sizes="" />
-                        <img className="" srcSet="/icons/sql-icon.png" alt="SQL Icon" loading="" sizes="" />
+        <div className="skills__container">
+            <h2>Teknologier</h2>
+        
+          <div className="skills__card">
+            <h4>Programmeringsspråk</h4>
+            {renderIcons(skills.programmeringssprak)}
+          </div>
 
-                </div>
-                <div className="">
-                    <h4>Frontend og backend</h4>
-                        <img className="" srcSet="/icons/react-icon.png" alt="React Icon" loading="" sizes="" />
-                        <img className="" srcSet="/icons/svelte-icon.png" alt="Svelte Icon" loading="" sizes="" />
-                        <img className="" srcSet="/icons/sass-icon.png" alt="SASS Icon" loading="" sizes="" />
-                        <img className="" srcSet="/icons/node.js-icon.png" alt="Node.js Icon" loading="" sizes="" />
-                        <img className="" srcSet="/icons/express-icon.png" alt="Express Icon" loading="" sizes="" />
-                        <img className="" srcSet="/icons/.net-icon.png" alt=".NET Icon" loading="" sizes="" />
-                </div>
-                <div className="">
-                    <h4>Andre verktøy</h4>
-                        <img className="" srcSet="/icons/vscode-icon.png" alt="Visual Studio Code Icon" loading="" sizes="" />
-                        <img className="" srcSet="/icons/visualstudio-icon.png" alt="Visual Studio Icon" loading="" sizes="" />
-                        <img className="" srcSet="/icons/github-icon.png" alt="GitHub Icon" loading="" sizes="" />
-                        <img className="" srcSet="/icons/terminal-icon.png" alt="Terminal Icon" loading="" sizes="" />
-                        <img className="" srcSet="/icons/figma-icon.png" alt="Figma Icon" loading="" sizes="" />
-                        <img className="" srcSet="/icons/docker-icon.png" alt="Docker Icon" loading="" sizes="" />
-                        <img className="" srcSet="/icons/mongodb-icon.png" alt="Mongo DB Icon" loading="" sizes="" />
-                        <img className="" srcSet="/icons/postgresql-icon.png" alt="PostgreSQL Icon" loading="" sizes="" />
-                        <img className="" srcSet="/icons/mysql-icon.png" alt="MySQL Icon" loading="" sizes="" />
-                        <img className="" srcSet="/icons/elasticsearch-icon.webp" alt="Elasticsearch Icon" loading="" sizes="" />
-                </div>
+          <div className="skills__card">
+            <h4>Frontend og backend</h4>
+            {renderIcons(skills.frontendBackend)}
+          </div>
 
-                <img id="about-image" srcSet="/images/profile_picture.webp" alt="Image of girl with glasses with a heart" loading="lazy" sizes=""/>
-                <div className="animals">
-                    <p>
-                        Jeg elsker dyr, men er allergisk mot katter, hunder og hester.. 
-                        Likevel har vi den søsteste lille djevelen av en kattepus. 
-                        Ironisk nok er hun oppkalt etter et tegneserie hamster, og heter Klara.
-                    </p>
-                </div>
-                <div className="nurse">
-                    <p>
-                        Jeg er utdannet spesialsykepleier i psykisk helsearbeid, 
-                        men byttet ut en sikker jobb situasjon for å bli webutvikler i 2023.
-                    </p>
-                </div>
-                <div className="family">
-                    <p>
-                        Jeg er en typisk familiekjær kvinne, gift med en fire år gammel sønn.
-                    </p>
-                </div>
-                <div className="small-farm">
-                    <p>
-                        Når jeg vokser opp, ønsker jeg meg ett småbruk hvor jeg kan ha kyllinger
-                        og alpakkaer. 
-                    </p>
-                </div>
+          <div className="skills__card">
+            <h4>Andre verktøy</h4>
+            {renderIcons(skills.andreVerktoy)}
+          </div>
+        </div>
 
-            </main>
-            <Footer />
-        </>
-    )
+        <div className="funfacts__container">
+          <h3>
+            Funfacts 
+          </h3>
+
+          <div className="funfacts__cards">
+            <p>
+              Jeg er utdannet spesialsykepleier i psykisk helsearbeid fra 2021.
+            </p>
+            <FaUserNurse className="funfact__icon --nurse"/>
+          </div>
+          <div className="funfacts__cards">
+            <p>
+              Jeg er en typisk familiekjær kvinne, gift med en {sonAge} år gammel
+              sønn. 
+            </p>
+            <PiLegoSmileyFill className="funfact__icon --lego"/>
+            
+          </div>
+
+          <div className="funfacts__cards">
+            <p>
+              Når jeg vokser opp, ønsker jeg meg ett småbruk hvor jeg kan ha
+              kyllinger og alpakkaer.
+            </p>
+          </div>
+        </div>
+      </main>
+      <Footer />
+    </>
+  );
 }

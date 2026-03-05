@@ -1,180 +1,682 @@
 $page-background: #DAC8BE;
+$footer-color: #baaba4;
 $main-text-color: black;
-$card-color:  #A2AF95;
+$card-color: #A2AF95;
+$react_icon: #ec0f7d9e;
+$react_icon-dot: rgb(0, 163, 0);
+$white: rgba(255, 255, 255, 0.934);
+$legoMan: rgba(255, 230, 0, 0.877);
 
 $header-font: "Pixelify Sans", sans-serif;
 $main-font: Arial;
 
+* {
+  color: $main-text-color;
+  font-family: $main-font;
 
-*{
-    color: $main-text-color;
+  h1,
+  h2,
+  h3 {
+    font-family: $header-font;
+  }
+
+  p{
+    line-height: 1.4; 
+  }
+}
+
+body {
+  margin: 0;
+  background-color: $page-background;
+
+  h1{
+    margin-left: 4rem;
+  }
+
+  h1,
+  h2,
+  .logo span {
+    font-family: $header-font;
+  }
+
+  li {
+    list-style: none;
+  }
+
+}
+
+/* ----- Header/ Nav ------- */
+.site__header {
+  margin: 0;
+  max-width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+  padding: 0 2rem; 
+  background-color: $card-color;
+  box-shadow: 0 4px 6px 6px $footer-color;
+
+  .burger {
+    margin-left: auto; 
+  }
+
+  .site__header--links {
+    margin-top: 1rem;
+  }
+
+  .react__icon--house {
+    font-size: 3rem;
+    fill: $react_icon;
+    display: inline;
+  }
+
+  .react__icon--dot {
+    fill: $react_icon-dot;
+    padding: 0 0.5rem;
+  }
+
+  a:link {
+    text-decoration: none;
+    padding: 1rem 2.5rem;
+    font-size: 1.5rem;
     font-family: $main-font;
-}
 
-body{
-        background-color: $page-background;
-        h1,
-        h2,
-        h3{
-        font-family: $header-font;
+    &:hover {
+      zoom: 1.5;
     }
+  }
+
+  .logo span {
+    color: $main-text-color;
+    animation: wave 5.5s infinite;
+    font-size: 2.5rem;
+    margin: 0;
+  }
+
+  /* Forsinkelse på hver bokstav */
+  .logo span:nth-child(1) { animation-delay: 0s; }
+  .logo span:nth-child(2) { animation-delay: 0.3s; }
+  .logo span:nth-child(3) { animation-delay: 0.6s; }
+  .logo span:nth-child(4) { animation-delay: 0.9s; }
+  .logo span:nth-child(5) { animation-delay: 1.2s; }
+  .logo span:nth-child(6) { animation-delay: 1.6s; }
+  .logo span:nth-child(7) { animation-delay: 2.1s; }
+  .logo span:nth-child(8) { animation-delay: 2.5s; }
+  .logo span:nth-child(9) { animation-delay: 2.9s; }
+  .logo span:nth-child(10) { animation-delay: 3.1s; }
+  .logo span:nth-child(11) { animation-delay: 3.5s; }
+  .logo span:nth-child(12) { animation-delay: 3.9s; }
+  .logo span:nth-child(13) { animation-delay: 4.1s; }
+  .logo span:nth-child(14) { animation-delay: 4.5s; }
+  .logo span:nth-child(15) { animation-delay: 4.9s; }
+  .logo span:nth-child(16) { animation-delay: 5.1s; }
+  .logo span:nth-child(17) { animation-delay: 5.5s; }
+
+  .burger {
+    display: none;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+
+    .burger__line--icon {
+      font-size: 2.5rem;
+
+  }
+  }
+
+  
 }
 
-header{
+@keyframes wave {
+  0%   { color: black; }
+  25%  { color: hotpink; }
+  50%  { color: black; }
+  100% { color: black; }
+}
+
+/* --- Nav meny mobil ---- */
+.menu__backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 200ms ease;
+  z-index: 50;
+
+  &.is-open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+/* ----- Footer ----- */
+
+footer {
+  display: flex;
+  justify-content: space-evenly;
+  border-top: 2px solid $footer-color;
+
+  .site__footer--contact {
+    .react__icon {
+      font-size: 2.5rem;
+      padding: 1rem 2.5rem;
+    }
+  }
+}
+
+/* ------ Forside/ Frontpage ------ */
+
+#front_page {
+  margin: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  max-height: 700px;
+
+  p {
+    font-size: 1.5rem;
+
+    .react__icon--heart {
+      font-size: 3rem;
+      fill: $react_icon;
+    }
+  }
+
+  .hero {
+    width: 100%;
+    overflow: hidden;
+
+    .hero__img {
+      width: 100%;
+      height: auto;
+      display: block;
+      padding: 2rem;
+      margin: 0 auto;
+    }
+  }
+}
+
+#about {
+  margin: 5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "name ."
+    "personal funfacts"
+    "skills experience";
+  gap: 2rem;
+
+  #name{
+    grid-area: name;
+  }
+
+  .about__personal{
+      background-color: rgba($card-color, 0.5);
+      display: flex;
+      flex-direction: row;
+      grid-area: personal;
+
+      #about-image{
+        width: 15rem;
+        margin: 0;
+      }
+
+      p{
+        padding: 0 7rem;
+        display: inherit;
+        margin: auto;
+      }
+  }
+
+   .experience__container{
+      background-color: rgba($white, 0.8);
+      margin: 1rem;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 4px 6px 6px $footer-color;
+      grid-area: experience;
+
+      .experience__education,
+      .experience__work{
+        background-color: rgba($card-color, 0.6);
+        margin: 1rem;
+        padding: inherit;
+        border-radius: 0.5rem;
+        box-shadow: inherit;
+
+        ul{
+          padding: 0;
+        }
+      }
+    }
+
+  .skills__container {
+    background-color: rgba($white, 0.8);
+    padding: 2rem;
+    margin: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    gap: 2rem;
+    border-radius: 0.5rem;
+    grid-area: skills;
     
 
-    a{
-        padding: 1rem 2.5rem;
+    .skills__card {
+      background: rgba($card-color, 0.6);
+      height: 100%;
+      padding: 0 1.5rem 1rem;
+      display: grid;
+      border-radius: 10px;
+
+      .skills__icons {
+        display: block;
+
+        .icon__wrapper{
+          position: relative;
+          display: inline-block;
+          text-align: center;
+      
+          .teknologispråk{
+            width: 2.5rem;
+            transition: opacity 0.3s ease;
+            padding: 0.5rem;
+          }
+
+          .icon__text{
+            position: absolute;
+            bottom: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            font-size: 14px;
+            transition: opacity 0.3s ease;
+          }
+
+          &:hover{
+            .teknologispråk{
+              opacity: 0.5;
+            }
+
+            .icon__text{
+              opacity: 1;
+            }
+          }
+
+          }
+        }
+      }
+    }
+
+    .funfacts__container{
+      grid-area: funfacts;
+    }
+  }
+
+
+/* ------- Prosjekt side ---------- */
+
+.project__grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    gap: 2.5rem;            
+    max-width: 100rem;
+    margin: 0 auto;
+    padding: 5rem; 
+    padding-top: 0;
+    box-sizing: border-box;
+
+
+    .project__card{
+        background-color: $white;
+        border-radius: 5px;
+        overflow: hidden;       
+        width: 100%;             
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.75rem;
+        padding: 1rem; 
+        box-shadow: 0 4px 6px 6px $footer-color; 
+        box-sizing: border-box;
+
+        opacity: 0.7;
 
         &:hover{
-            zoom: 1.5;
+            opacity: 1;
         }
 
-        font-family: $header-font;
-    } 
-}
-
-
-
-#front_page{
-        
-        background: $page-background url("/images/portefølje_bakgrunn.webp") no-repeat center/contain;
-        min-height: clamp(320px, 80vh, 1100px);
-        
-
-        #diplom{
+   
+        img{
+            width: 100%;
+            object-fit: cover;     
+            border-radius: 4px;
+            box-shadow: inherit;
             
-            width: 15rem;
-            border: solid 6px #b6a708;;
-            display: flex;
-            flex-direction: row-reverse;
-            position: relative;
-            top: 400px;
-            left: 1200px;
+        }
 
-            transition: transform 1s;
-            overflow: hidden;
-            border-radius: 8px;
+        .projectcard__list{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 0.5rem;
+            padding: 0;
 
-            &::before{
-                content: "";
-                position: absolute;
-                inset: -150;
-                pointer-events: none;
+            li{
+                margin: auto;
+                padding: 0.5rem 1rem;
+                background-color: $card-color;
+                border-radius: 1rem;
+                justify-content:space-between;
+                font-size: 0.8rem;
+            }
+            
+        }
 
-                background: linear-gradient(
-                45deg,
-                transparent 43%,
-                rgba(255, 255, 255, 0.0) 47%,
-                rgba(255, 255, 255, 0.95) 50%,
-                rgba(255, 255, 255, 0.0) 53%,
-                transparent 57%
-                );
+        button{
+            cursor: pointer;
+            background-color: $card-color;
+            border: none;
+            border-radius: 1rem;
+            padding: 0.5rem;
 
-                transform: translate(-60%, -60%);
-                animation: borderShine 3s ease-in-out infinite;
+            a{
+                text-decoration: none;
+                font-weight: 700;
             }
 
-            animation: borderGlow 3s ease-in-out infinite;
-
-            img{
-                height: 15rem;
-                
-            }
-
-            p{
-                font-family: $header-font;
-                font-weight: bold;
-                font-size: 2.5rem;
-                display: flex;
-                position: relative;
-            }
         }
 
-        @keyframes borderShine{
-            0%   { transform: translate(-60%, -60%); opacity: 0; }
-            10%  { opacity: 1; }
-            60%  { transform: translate(60%, 60%); opacity: 1; }
-            100% { transform: translate(60%, 60%); opacity: 0; }
-        }
-
-        @keyframes borderGlow{
-            0%   { border-color: #b6a708; }
-            50%  { border-color: #f4e00b; }
-            100% { border-color: #b6a708; }
-        }
-
-        #diplom:hover{
-            transform: scale(1.1);
-
-        }
     }
-
-main{
-    
-    margin: 2rem;
-
-    h1,
-    h2,
-    h3{
-        font-family: $header-font;
-    }
-       
-    
 }
 
-/*#about{
-    background: $page-background;
+.project__page--card {
+  padding: 2rem;
 
-    padding: 3rem;
-
+  .carousel {
     display: grid;
-    gap: 1.5rem;
-
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: auto 1fr auto;
     grid-template-areas:
-        "name name animals animals"
-        "image family family nurse"
-        ". farm farm .";
-
-
-    #name { grid-area: name; }
-    #about-image { grid-area: image; }
-    .animals     { grid-area: animals; }
-    .nurse       { grid-area: nurse; }
-    .family      { grid-area: family; }
-    .small-farm  { grid-area: farm; }
-    
-    #about-image{
-        width: 14rem;
-        border-radius: 50%;
-        }
-
-
-    .animals,
-    .nurse,
-    .family,
-    .small-farm{
-        background: $card-color;
-        border-radius: 10px;
-
-        p{
-            padding: 1.5rem;
-            align-items: center;
-            justify-content: center;
-        }
-    }
-}*/
-
-@media (max-width: 800px) {
-  #about {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-        "name"
-        "image"
-        "animals"
-        "nurse"
-        "family"
-        "farm";
+      "prev frame next"
+      ". dots .";
+    gap: 10px;
+    align-items: center;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 10px 16px;
+    background-color: white;
+    border-radius: 5px;
   }
+
+  .carousel__btn {
+    grid-area: prev;
+    width: 42px;
+    height: 42px;
+    border: 0;
+    border-radius: 999px;
+    cursor: pointer;
+    font-size: 28px;
+    line-height: 1;
+    background-color: $card-color;
+  }
+
+  .carousel__btn:last-of-type {
+    grid-area: next;
+  }
+
+  .carousel__frame {
+    grid-area: frame;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    margin: 0;
+    
+
+    img,
+    video {
+      width: 100%;
+      height: 25%;
+      display: block;
+      object-fit: cover;
+    }
+
+    .carousel__caption {
+        font-size: 0.95rem;
+        padding-top: 1rem;
+        opacity: 0.5;
+        font-style: italic;
+        text-align: center;
+        max-width: 70ch;
+    }
+  }
+
+  .carousel__dots {
+    grid-area: dots;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .carousel__dot {
+    width: 10px;
+    height: 10px;
+    border: 0;
+    border-radius: 999px;
+    cursor: pointer;
+    opacity: 0.4;
+    background-color: $card-color;
+  }
+
+  .carousel__dot.is-active {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+
+  .project__tech,
+  .project__collab {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(2.5rem, 1fr));
+    gap: 1rem;
+    align-items: center;
+    justify-items: center;
+  }
+
+  .project__tech--li {
+    padding: 0.5rem;
+    border-radius: 5px;
+    background-color: $white;
+    border: 2px solid $card-color;
+  }
+}
+
+.mobile__menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100dvh;
+  width: min(200px, 85vw);
+  background: $card-color;
+  transform: translateX(100%);
+  transition: transform 200ms ease;
+  z-index: 60;
+  padding: 16px;
+  box-shadow: -16px 0 48px rgba(0, 0, 0, 0.15);
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  &.is-open {
+    transform: translateX(0);
+  }
+
+  a {
+    padding: 12px 10px;
+    border-radius: 12px;
+  }
+
+}
+
+@media (min-width: 761px) {
+
+  .menu__backdrop,
+  .mobile__menu {
+    display: none;
+  }
+
+
+}
+
+@media (max-width: 760px) {
+  *{
+    p{
+      font-size: 0.95rem;
+    }
+  }
+
+  /* ---- Burger meny ----- */
+   .site__header--links {
+    display: none;
+  }
+
+
+  /* ------ Header/ Nav ------- */
+
+  .site__header{
+    padding: 0.5rem;
+
+    .header_logo{
+      margin: 0.6rem;
+      
+      p{
+        margin:0;
+      }
+    }
+
+    .logo{
+      margin: 0;
+
+      span{
+        font-size: 1.7rem;
+      }
+    }
+
+    .burger {
+        margin-right: 1rem;
+        display: inline-flex;
+    }
+  }
+
+  /* ------ Hovedside / Landingpage ------ */
+
+  #front_page {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  /* ------ Om meg ----------- */
+
+  #about{
+    margin: 1rem 2rem;
+
+    #name{
+      margin: 0;
+    }
+    
+    .about__personal{
+      display: flex;
+      flex-direction: column;
+      padding: 0.5rem;
+      border-radius: 1rem;
+      box-shadow: 0 4px 6px 6px $footer-color;
+
+      #about-image{
+      width: 10rem;
+      display: block;
+      margin: auto;
+      }
+
+      p{
+        padding: 0.5rem;
+      }
+    }
+
+    .experience__container{
+      background-color: rgba($white, 0.8);
+      margin: 1rem;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 4px 6px 6px $footer-color;
+
+      .experience__education,
+      .experience__work{
+        background-color: rgba($card-color, 0.6);
+        margin: 1rem;
+        padding: inherit;
+        border-radius: 0.5rem;
+        box-shadow: inherit;
+
+        ul{
+          padding: 0;
+        }
+      }
+    }
+    .skills__container{
+      display: block;
+      box-shadow: 0 4px 6px 6px $footer-color;
+      
+      .skills__card{
+        padding: 1rem;
+        margin-bottom: 1rem;
+        box-shadow: inherit;
+
+        h4{
+          margin: 0;
+          margin-bottom: 1rem;
+        }
+      }
+    }
+
+    .funfacts__container{
+      
+      .funfacts__cards{
+        background-color: rgba($card-color, 0.6);
+        border-radius: 1rem;
+        margin: 0.5rem;
+        padding: 0.8rem;
+        position: relative;
+        box-shadow: 0 4px 6px 6px $footer-color;
+
+        .funfact__icon{
+          font-size: 4rem;
+          z-index: 1000;
+          position: absolute;
+        
+          &.--nurse{
+            fill: $react_icon;
+            font-size: 3rem;
+            top: 4.2rem;
+          }
+
+          &.--lego{
+            fill: $legoMan;
+            right: 1rem;
+            top: 3rem;
+          }
+        }
+      }
+    }
+  }
+ 
+  /* ------ Prosjekter --------- */
+  .project__grid{
+    padding: 1.5rem;
+  }
+  
 }
