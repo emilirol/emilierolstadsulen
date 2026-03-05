@@ -1,7 +1,7 @@
-import { projects } from "../../data/projects";
-import ProjectCard from "../../pages/Projects/ProjectCard";
-import Header from "../../components/Header/Header.jsx";
-import Footer from "../../components/Footer/Footer.jsx"
+import { projects } from "../../data/projects.js";
+import ProjectCard from "../../pages/Projects/ProjectCard.jsx";
+import Header from "../Header/Header.jsx";
+import Footer from "../Footer/Footer.jsx"
 
 export default function ProjectGrid() {
   return (
