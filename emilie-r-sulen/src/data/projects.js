@@ -3,17 +3,20 @@ export const projects = [
     slug: "pawpartner",              // brukes i URL/routing og som unik id
     title: "Pawpartner - Web of Things høst 2025",
 
-    thumbnail: "/project-images/pawpartner-logo.webp", // kan være path eller importert bilde
+    thumbnail: "/project-images/pawpartner-app-frontpage.webp", // kan være path eller importert bilde
 
     media: [
-      { type: "image", src: "/project-images/pawpartner-logo.webp"},
-      { type: "image", src: "/project-images/pawpartner-poster-info.webp"},
-      { type: "image", src: "/project-images/pawpartner-poster.webp"},
-      { type: "video", src: "/project-images/video-prototype-WoT.mp4"}
+      { type: "image", src: "/project-images/pawpartner-logo.webp", caption:"Pawpartner-logoen "},
+      { type: "image", src: "/project-images/pawpartner-app-frontpage.webp", caption:""},
+      { type: "image", src: "/project-images/pawpartner-app-homepage.webp", caption:"Hjemmeskjerm med oversikt over dagens anbefalte aktivitet, forlag til aktiviteter og forholdssatus"},
+      { type: "image", src: "/project-images/pawpartner-app-todaysgoal.webp", caption:""},
+      { type: "image", src: "/project-images/pawpartner-poster-info.webp", caption:"Informasjonsplakat"},
+      { type: "image", src: "/project-images/pawpartner-poster.webp", caption:"Konseptplakat"},
+      { type: "video", src: "/project-images/video-prototype-WoT.mp4", caption:"Konseptvideo"}
     ],
 
-    shortDescription: "Pawpartner, aktivitettrackeren utviklet med fokus på rellasjon mellom hund og eier.",
-    fullDescription: "",
+    shortDescription: "Pawpartner, aktivitretstrackeren utviklet med fokus på rellasjon mellom hund og eier.",
+    fullDescription: "", 
 
     technologies: ["JavaScript", "HTML", "CSS", "Micro:Bit"], // "used technologies"
     githubUrl: "https://github.com/emilirol/WoT-Dogtracker",
@@ -44,14 +47,14 @@ export const projects = [
     thumbnail: "/project-images/internship-flytit-chat.webp", // kan være path eller importert bilde
 
     media: [
-      { type: "image", src: "/project-images/internship-flytit-chat.webp"},
-      { type: "image", src: "/project-images/internship-flytit-chatBoble.webp"},
+      { type: "image", src: "/project-images/internship-flytit-chatBoble.webp", caption:"Chatbobblen som legges på nettsiden"},
+      { type: "image", src: "/project-images/internship-flytit-chat.webp", caption:"Åpnet chat \"kundeservice\""},
     ],
 
-    shortDescription: "Chat Bot widget laget for å kunne brukes av norske nettbutikker.",
+    shortDescription: "Chat Bot widget er utviklet for å kunne brukes av norske nettbutikker som en automatisk kundeservice.",
     fullDescription: "",
 
-    technologies: ["Svelte", "C#", "Docker"], // "used technologies"
+    technologies: ["Svelte", "C#", "Docker"], 
     githubUrl: "https://github.com/emilirol/internship_flytit_fall25",
     liveUrl: "",
 
@@ -63,14 +66,14 @@ export const projects = [
     thumbnail: "/project-images/studyplatform-login.webp", // kan være path eller importert bilde
 
     media: [
-      { type: "image", src: "/project-images/studyplatform-login.webp"},
-      { type: "image", src: "/project-images/studyplatform-create.webp"},
-      { type: "image", src: "/project-images/studyplatform-dashboard.webp"},
-      { type: "image", src: "/project-images/studyplatform-export.webp"},
-      { type: "image", src: "/project-images/studyplatform-profile.webp"},
-      { type: "image", src: "/project-images/studyplatform-share.webp"},
-      { type: "image", src: "/project-images/studyplatform-study1.webp"},
-      { type: "image", src: "/project-images/studyplatform-study2.webp"},
+      { type: "image", src: "/project-images/studyplatform-login.webp", caption:"Studyplatforms landingsside og loginside",},
+      { type: "image", src: "/project-images/studyplatform-create.webp", caption:"På \"lag ny studie\" kan man laste opp flere typer media og ha en fleksibel spørsmålsbygger.",},
+      { type: "image", src: "/project-images/studyplatform-dashboard.webp", caption:"Dashbord som viser alle lagde studier med filtrering",},
+      { type: "image", src: "/project-images/studyplatform-export.webp", caption:"",},
+      { type: "image", src: "/project-images/studyplatform-profile.webp", caption:"",},
+      { type: "image", src: "/project-images/studyplatform-share.webp", caption:"",},
+      { type: "image", src: "/project-images/studyplatform-study1.webp", caption:"",},
+      { type: "image", src: "/project-images/studyplatform-study2.webp", caption:"",},
     ],
 
     shortDescription: "Studyplatform utviklet for å lage og administrere undersøkelser.",
@@ -94,5 +97,22 @@ export const projects = [
         github: "",
       },
       ] // eller tom []
+  },
+  {
+    slug: "Prosjekt kommer",              // brukes i URL/routing og som unik id
+    title: "",
+    thumbnail: "/project-images/placeholder.webp", // kan være path eller importert bilde
+
+    media: [
+    ],
+
+    shortDescription: "",
+    fullDescription: "",
+
+    technologies: ["Her kommer det ett nytt prosjekt senere"], // "used technologies"
+    githubUrl: "",
+    liveUrl: "",
+
+    collaborations: [] // eller tom []
   },
 ];

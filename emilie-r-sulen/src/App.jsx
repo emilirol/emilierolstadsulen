@@ -3,7 +3,7 @@ import Home from "./pages/Home/Home.jsx";
 import About from "./pages/About/About.jsx";
 import Contact from "./pages/Contact/Contact.jsx";
 
-import Projects from "./pages/Projects/Projects.jsx";
+import ProjectGrid from "./components/ProjectCards/ProjectGrid.jsx";
 import ProjectPage from "./pages/Projects/ProjectPage.jsx";
 
 export default function App() {
@@ -13,7 +13,7 @@ export default function App() {
       <Route path="/about" element={<About />} />
       <Route path="/contact" element={<Contact />} />
 
-      <Route path="/projects" element={<Projects />} />
+      <Route path="/projects" element={<ProjectGrid />} />
       <Route path="/projects/:slug" element={<ProjectPage />} />
     </Routes>
   );
