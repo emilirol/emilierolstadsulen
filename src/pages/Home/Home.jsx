@@ -24,7 +24,7 @@ export default function Home(){
         <>
             <Header/>
 
-            <main id="front_page">
+            <div id="front_page">
                 <div>
                     <p >Sykepleier og snaaart fullstackutvikler med <GiHeartOrgan className="react__icon--heart" /> for brukervennlighet og design</p>
                 </div>
@@ -43,7 +43,7 @@ export default function Home(){
                         />
                     </picture>
                 </div>
-            </main>
+            </div>
 
             <Footer/>
 

@@ -8,9 +8,7 @@ export default function ProjectGrid() {
     <>
       <Header />
       <h1 className="project-title">Prosjekter</h1>
-
       <div className="project__grid">
-          
           {projects.map((project) => (
             <ProjectCard key={project.slug} project={project} />
           ))}
