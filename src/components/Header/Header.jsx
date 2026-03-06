@@ -41,23 +41,20 @@ export default function Header() {
   const links = useMemo(
     () => (
       <>
-        <Link to="/">
+        <Link className="zoom-out" to="/">
           {/*<GiMushroomHouse className="react__icon--house" />*/}
           Hjem
         </Link>
-
         {!isOnAboutPage && (
           <Link className="zoom-out" to="/about">
             Om meg
           </Link>
         )}
-
         {!isOnContactPage && (
           <Link className="zoom-out" to="/contact">
             Kontakt meg
           </Link>
         )}
-
         {!isOnProjectsPage && (
           <Link className="zoom-out" to="/projects">
             Prosjekter
