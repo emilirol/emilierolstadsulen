@@ -3,13 +3,10 @@ export const projects = [
     slug: "pawpartner",              // brukes i URL/routing og som unik id
     title: "Pawpartner - Web of Things høst 2025",
 
-    thumbnail: "/project-images/pawpartner-app-frontpage.webp", // kan være path eller importert bilde
+    thumbnail: "/project-images/pawpartner.webp", // kan være path eller importert bilde
 
     media: [
-      { type: "image", src: "/project-images/pawpartner-logo.webp", caption:"Pawpartner-logoen "},
-      { type: "image", src: "/project-images/pawpartner-app-frontpage.webp", caption:""},
-      { type: "image", src: "/project-images/pawpartner-app-homepage.webp", caption:"Hjemmeskjerm med oversikt over dagens anbefalte aktivitet, forlag til aktiviteter og forholdssatus"},
-      { type: "image", src: "/project-images/pawpartner-app-todaysgoal.webp", caption:""},
+      { type: "image", src: "/project-images/pawpartner.webp", caption:"Pawpartner"},
       { type: "image", src: "/project-images/pawpartner-poster-info.webp", caption:"Informasjonsplakat"},
       { type: "image", src: "/project-images/pawpartner-poster.webp", caption:"Konseptplakat"},
       { type: "video", src: "/project-images/video-prototype-WoT.mp4", caption:"Konseptvideo"}
@@ -44,9 +41,10 @@ export const projects = [
   {
     slug: "chatwidget",              // brukes i URL/routing og som unik id
     title: "Chat widget - Praktikant høst 2025",
-    thumbnail: "/project-images/internship-flytit-chat.webp", // kan være path eller importert bilde
+    thumbnail: "/project-images/chatbot.webp", // kan være path eller importert bilde
 
     media: [
+      { type: "image", src: "/project-images/chatbot.webp", caption:"Chatbot Widget"},
       { type: "image", src: "/project-images/internship-flytit-chatBoble.webp", caption:"Chatbobblen som legges på nettsiden"},
       { type: "image", src: "/project-images/internship-flytit-chat.webp", caption:"Åpnet chat \"kundeservice\""},
     ],
@@ -63,9 +61,10 @@ export const projects = [
   {
     slug: "studyplatform",              // brukes i URL/routing og som unik id
     title: "Studyplatform - Webprosjekt vår 2025",
-    thumbnail: "/project-images/studyplatform-login.webp", // kan være path eller importert bilde
+    thumbnail: "/project-images/studyplatform.webp", // kan være path eller importert bilde
 
     media: [
+      { type: "image", src: "/project-images/studyplatform.webp", caption:"Studyplatform",},
       { type: "image", src: "/project-images/studyplatform-login.webp", caption:"Studyplatforms landingsside og loginside",},
       { type: "image", src: "/project-images/studyplatform-create.webp", caption:"På \"lag ny studie\" kan man laste opp flere typer media og ha en fleksibel spørsmålsbygger.",},
       { type: "image", src: "/project-images/studyplatform-dashboard.webp", caption:"Dashbord som viser alle lagde studier med filtrering",},
