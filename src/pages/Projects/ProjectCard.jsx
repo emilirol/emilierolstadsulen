@@ -14,7 +14,7 @@ export default function ProjectCard({ project }) {
 
         <p>{project.shortDescription}</p>
         
-        <button><Link to={`/projects/${project.slug}`}>Les mer</Link></button>
+        <Link to={`/projects/${project.slug}`}><button>Les mer</button></Link>
         
       </div>
 
