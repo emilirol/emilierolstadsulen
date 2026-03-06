@@ -767,12 +767,16 @@ footer .site__footer--contact .react__icon {
   .contact__container {
     margin: 2rem;
     height: 35rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
   .contact__container .contact__social {
-    display: flex;
+    display: inherit;
     justify-content: space-evenly;
   }
   .contact__container .contact__social a .react__icon {
+    margin: 1rem;
     height: 3rem;
     width: 3rem;
   }

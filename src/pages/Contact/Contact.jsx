@@ -13,7 +13,7 @@ export default function Contact(){
                 <div className="contact__container">
                     <h1>Kontakt meg!</h1>
                         <p>Kjære du som har "forvillet" deg inn på denne nettsiden!</p>
-                        <p>Har du et prosjekt eller en idé innen UX-, design og/eller utvikling?
+                        <p>Har du et prosjekt eller en idé innen UX-design og/eller utvikling?
                             Kontakt meg gjerne via sosiale medier eller send meg en mail for en uforpliktende samtale.
                         </p>
                         <p>Ser fram til å høre fra deg!</p>
