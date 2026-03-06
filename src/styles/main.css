@@ -11,6 +11,9 @@
 * p {
   line-height: 1.4;
 }
+* .project__back-to {
+  margin: 1rem;
+}
 
 body {
   margin: 0;
@@ -46,7 +49,9 @@ body li {
   margin-left: auto;
 }
 .site__header .site__header--links {
-  margin-top: 1rem;
+  align-items: center;
+  gap: 1.5rem;
+  display: flex;
 }
 .site__header .react__icon--house {
   font-size: 3rem;
@@ -57,14 +62,15 @@ body li {
   fill: rgb(0, 163, 0);
   padding: 0 0.5rem;
 }
-.site__header a:link {
+.site__header .zoom-out {
   text-decoration: none;
-  padding: 1rem 2.5rem;
   font-size: 1.5rem;
   font-family: Arial;
+  transition: transform 0.2s ease;
+  transform-origin: center;
 }
-.site__header a:link:hover {
-  zoom: 1.5;
+.site__header .zoom-out:hover {
+  transform: scale(2);
 }
 .site__header .logo span {
   color: black;
@@ -183,10 +189,8 @@ footer .site__footer--contact .react__icon {
 #front_page {
   margin: 2rem;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  gap: 2rem;
-  max-height: 700px;
+  height: 35rem;
 }
 #front_page p {
   font-size: 1.5rem;
@@ -369,68 +373,84 @@ footer .site__footer--contact .react__icon {
   display: grid;
   grid-template-columns: auto 1fr auto;
   grid-template-areas: "prev frame next" ". dots .";
-  gap: 10px;
   align-items: center;
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 10px 16px;
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0.5rem;
   background-color: white;
-  border-radius: 5px;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px 6px #baaba4;
+  grid-area: carousel;
 }
-.project__page--card .carousel__btn {
+.project__page--card .carousel .carousel__btn {
   grid-area: prev;
-  width: 42px;
-  height: 42px;
+  width: 2.5rem;
+  height: 2.5rem;
   border: 0;
-  border-radius: 999px;
+  border-radius: 2rem;
   cursor: pointer;
-  font-size: 28px;
-  line-height: 1;
+  font-size: 2rem;
+  line-height: 1.5;
   background-color: #A2AF95;
 }
-.project__page--card .carousel__btn:last-of-type {
+.project__page--card .carousel .carousel__btn:last-of-type {
   grid-area: next;
 }
-.project__page--card .carousel__frame {
+.project__page--card .carousel img,
+.project__page--card .carousel video {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px 6px #baaba4;
   grid-area: frame;
   border-radius: 0.5rem;
   overflow: hidden;
   margin: 0;
 }
-.project__page--card .carousel__frame img,
-.project__page--card .carousel__frame video {
-  width: 100%;
-  height: 25%;
-  display: block;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.project__page--card .carousel__frame .carousel__caption {
-  font-size: 0.95rem;
-  padding-top: 1rem;
-  opacity: 0.5;
-  font-style: italic;
-  text-align: center;
-  max-width: 70ch;
-}
-.project__page--card .carousel__dots {
+.project__page--card .carousel .carousel__dots {
   grid-area: dots;
   display: flex;
   justify-content: center;
-  gap: 8px;
+  gap: 0.5rem;
 }
-.project__page--card .carousel__dot {
-  width: 10px;
-  height: 10px;
+.project__page--card .carousel .carousel__dot {
+  width: 0.8rem;
+  height: 0.8rem;
   border: 0;
-  border-radius: 999px;
+  border-radius: 2rem;
   cursor: pointer;
   opacity: 0.4;
   background-color: #A2AF95;
 }
-.project__page--card .carousel__dot.is-active {
+.project__page--card .carousel .carousel__dot.is-active {
   opacity: 1;
   transform: scale(1.2);
+}
+.project__page--card .project {
+  margin: 0 auto;
+  max-width: 50rem;
+  width: 100%;
+  padding: 1rem;
+}
+.project__page--card .project .project__tech--container {
+  grid-area: teknologi;
+}
+.project__page--card .project .project__tech--container .project__tech {
+  display: flex;
+  align-content: center;
+  margin: 0 auto;
+}
+.project__page--card .project .project__tech--container .project__tech--li {
+  padding: 0.5rem;
+  border-radius: 2rem;
+  background-color: rgba(255, 255, 255, 0.934);
+  border: 2px solid #A2AF95;
+}
+.project__page--card .project .project__collab--container {
+  grid-area: collab;
 }
 .project__page--card .project__tech,
 .project__page--card .project__collab {
@@ -440,13 +460,46 @@ footer .site__footer--contact .react__icon {
   align-items: center;
   justify-items: center;
 }
-.project__page--card .project__tech--li {
+.project__page--card .project__collab .project__collab--li {
+  width: 10rem;
   padding: 0.5rem;
-  border-radius: 5px;
+  border-radius: 2rem;
   background-color: rgba(255, 255, 255, 0.934);
   border: 2px solid #A2AF95;
 }
+.project__page--card .project__collab .project__collab--li a {
+  display: flex;
+  flex-direction: row;
+  transition: transform 0.2s ease;
+  transform-origin: center;
+}
+.project__page--card .project__collab .project__collab--li a:hover {
+  transform: scale(1.2);
+}
+.project__page--card .project__collab .project__collab--li .project__collab--icon {
+  fill: rgb(45, 55, 243);
+  font-size: 2rem;
+  padding: 0 1rem;
+}
+.project__page--card .lenker {
+  grid-area: lenker;
+}
+.project__page--card .lenker .lenker__link {
+  margin: 1rem;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+  transform-origin: center;
+  display: inline-flex;
+}
+.project__page--card .lenker .lenker__link:hover {
+  transform: scale(1.2);
+}
+.project__page--card .lenker .lenker__icon {
+  margin: 0 1rem;
+  font-size: 2rem;
+}
 
+/*------- Burger menu mobil ------ */
 .mobile__menu {
   position: fixed;
   top: 0;
@@ -481,13 +534,16 @@ footer .site__footer--contact .react__icon {
   * p {
     font-size: 0.95rem;
   }
-  /* ---- Burger meny ----- */
-  .site__header--links {
-    display: none;
+  * h1 {
+    font-size: 1.5rem;
+    margin: 0 auto;
   }
-  /* ------ Header/ Nav ------- */
+  /* ------ Header/ Nav / Burger menu ------- */
   .site__header {
     padding: 0.5rem;
+  }
+  .site__header .site__header--links {
+    display: none;
   }
   .site__header .header_logo {
     margin: 0.6rem;
@@ -522,7 +578,7 @@ footer .site__footer--contact .react__icon {
   #about {
     margin: 1rem 2rem;
     grid-template-columns: 1fr;
-    grid-template-areas: "name" "personal" "funfacts" "skills" "experience";
+    grid-template-areas: "name" "personal" "skills" "experience" "funfacts";
   }
   #about #name {
     margin: 0;
@@ -601,7 +657,7 @@ footer .site__footer--contact .react__icon {
   }
   #about .funfacts__container .funfacts__cards .funfact__icon {
     font-size: 4rem;
-    z-index: 1000;
+    z-index: 100;
     position: absolute;
   }
   #about .funfacts__container .funfacts__cards .funfact__icon.--nurse {
@@ -616,6 +672,108 @@ footer .site__footer--contact .react__icon {
   }
   /* ------ Prosjekter --------- */
   .project__grid {
-    padding: 1.5rem;
+    padding: 1rem;
+  }
+  .project__page--card {
+    margin: 1rem;
+    padding: 0.75rem;
+    box-sizing: border-box;
+  }
+  .project__page--card .carousel {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "frame" "dots" "controls";
+    gap: 0.3rem;
+    width: 100%;
+    max-width: 100%;
+  }
+  .project__page--card .carousel .carousel__dots {
+    grid-area: dots;
+    justify-content: center;
+  }
+  .project__page--card .carousel .carousel__dots .carousel__dot {
+    height: 0.5rem;
+  }
+  .project__page--card .carousel .carousel__btn {
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 1.5rem;
+  }
+  .project__page--card .carousel .carousel__btn .carousel__btn--icon {
+    font-size: 1rem;
+  }
+  .project__page--card .carousel .carousel__btn:first-of-type {
+    grid-area: controls;
+    justify-self: start;
+  }
+  .project__page--card .carousel .carousel__btn:last-of-type {
+    grid-area: controls;
+    justify-self: end;
+  }
+  .project__page--card .carousel img,
+  .project__page--card .carousel video {
+    grid-area: frame;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    display: block;
+    border-radius: 0.5rem;
+  }
+  .project__page--card .project {
+    width: 100%;
+    max-width: 100%;
+    padding: 0.5rem;
+    box-sizing: border-box;
+    min-width: 0;
+  }
+  .project__page--card .project .project__tech,
+  .project__page--card .project .project__collab {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    box-sizing: border-box;
+  }
+  .project__page--card .project .project__tech--li,
+  .project__page--card .project .project__collab--li {
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    font-size: 0.9rem;
+    padding: 0.4rem 0.65rem;
+  }
+  .project__page--card .project .lenker {
+    width: 100%;
+    max-width: 100%;
+  }
+  .project__page--card .project .lenker .lenker__link {
+    margin: 0.5rem;
+  }
+  .project__page--card .project .lenker .lenker__icon {
+    margin: 0 0.5rem;
+    font-size: 1.5rem;
+  }
+  .contact__container {
+    margin: 2rem;
+    height: 35rem;
+  }
+  .contact__container .contact__social {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .contact__container .contact__social a .react__icon {
+    height: 3rem;
+    width: 3rem;
   }
 }/*# sourceMappingURL=main.css.map */
