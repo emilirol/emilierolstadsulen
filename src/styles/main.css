@@ -505,6 +505,13 @@ footer .site__footer--contact .react__icon {
     margin-right: 1rem;
     display: inline-flex;
   }
+  /* ------- Footer ----------- */
+  footer {
+    flex-direction: column;
+  }
+  footer p {
+    margin: 0 auto;
+  }
   /* ------ Hovedside / Landingpage ------ */
   #front_page {
     display: flex;
@@ -514,13 +521,13 @@ footer .site__footer--contact .react__icon {
   /* ------ Om meg ----------- */
   #about {
     margin: 1rem 2rem;
+    grid-template-columns: 1fr;
+    grid-template-areas: "name" "personal" "funfacts" "skills" "experience";
   }
   #about #name {
     margin: 0;
   }
   #about .about__personal {
-    display: flex;
-    flex-direction: column;
     padding: 0.5rem;
     border-radius: 1rem;
     box-shadow: 0 4px 6px 6px #baaba4;
@@ -529,9 +536,10 @@ footer .site__footer--contact .react__icon {
     width: 10rem;
     display: block;
     margin: auto;
+    border-radius: 1rem;
   }
   #about .about__personal p {
-    padding: 0.5rem;
+    padding: 1.5rem;
   }
   #about .experience__container {
     background-color: rgba(255, 255, 255, 0.8);
@@ -553,13 +561,31 @@ footer .site__footer--contact .react__icon {
     padding: 0;
   }
   #about .skills__container {
-    display: block;
     box-shadow: 0 4px 6px 6px #baaba4;
+    grid-template-columns: 1fr;
+    padding: 1rem;
+    margin: 0.5rem;
+    gap: 1rem;
   }
   #about .skills__container .skills__card {
     padding: 1rem;
+    height: auto;
     margin-bottom: 1rem;
     box-shadow: inherit;
+  }
+  #about .skills__container .skills__card .skills__icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  #about .skills__container .skills__card .skills__icons .icon__wrapper .teknologispråk {
+    width: 2rem;
+    padding: 0.25rem;
+  }
+  #about .skills__container .skills__card .skills__icons .icon__wrapper .icon__text {
+    font-size: 1rem;
+    font-weight: bold;
+    bottom: 1rem;
   }
   #about .skills__container .skills__card h4 {
     margin: 0;

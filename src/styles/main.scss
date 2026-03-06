@@ -572,6 +572,15 @@ footer {
     }
   }
 
+  /* ------- Footer ----------- */
+  footer{
+    flex-direction: column;
+    
+    p{
+      margin: 0 auto;
+    }
+  }
+
   /* ------ Hovedside / Landingpage ------ */
 
   #front_page {
@@ -584,14 +593,19 @@ footer {
 
   #about{
     margin: 1rem 2rem;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "name"
+      "personal"
+      "funfacts"
+      "skills"
+      "experience";
 
     #name{
       margin: 0;
     }
-    
+     
     .about__personal{
-      display: flex;
-      flex-direction: column;
       padding: 0.5rem;
       border-radius: 1rem;
       box-shadow: 0 4px 6px 6px $footer-color;
@@ -600,10 +614,11 @@ footer {
       width: 10rem;
       display: block;
       margin: auto;
+      border-radius: 1rem;
       }
 
       p{
-        padding: 0.5rem;
+        padding: 1.5rem;
       }
     }
 
@@ -628,13 +643,36 @@ footer {
       }
     }
     .skills__container{
-      display: block;
       box-shadow: 0 4px 6px 6px $footer-color;
+      grid-template-columns: 1fr;
+      padding: 1rem;
+      margin: 0.5rem;
+      gap: 1rem;
       
       .skills__card{
         padding: 1rem;
+        height: auto;
         margin-bottom: 1rem;
         box-shadow: inherit;
+
+        .skills__icons{
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.5rem;
+
+          .icon__wrapper{
+            .teknologispråk{
+              width: 2rem;
+              padding: 0.25rem;
+            }
+
+            .icon__text{
+              font-size: 1rem;
+              font-weight: bold;
+              bottom: 1rem;
+            }
+          }
+        }
 
         h4{
           margin: 0;
