@@ -1,2 +1,9 @@
 notes.md
-node_modules
+node_modules/
+dist/
+.vite/
+.env
+.env.*
+!.env.example
+.DS_Store
+coverage/
