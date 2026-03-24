@@ -66,11 +66,6 @@ body li {
   text-decoration: none;
   font-size: 1.5rem;
   font-family: Arial;
-  transition: transform 0.2s ease;
-  transform-origin: center;
-}
-.site__header .zoom-out:hover {
-  transform: scale(2);
 }
 .site__header .logo span {
   color: black;
@@ -578,6 +573,13 @@ footer .site__footer--contact .react__icon {
   .menu__backdrop,
   .mobile__menu {
     display: none;
+  }
+  .zoom-out {
+    transition: transform 0.2s ease;
+    transform-origin: center;
+  }
+  .zoom-out:hover {
+    transform: scale(2);
   }
 }
 @media (max-width: 760px) {

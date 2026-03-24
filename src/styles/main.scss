@@ -91,12 +91,6 @@ body {
     text-decoration: none;
     font-size: 1.5rem;
     font-family: $main-font;
-    transition: transform 0.2s ease;
-    transform-origin: center;
-    
-    &:hover {
-      transform: scale(2);
-    }
   }
 
   .logo span {
@@ -663,7 +657,14 @@ footer {
     display: none;
   }
 
-
+  .zoom-out{
+    transition: transform 0.2s ease;
+    transform-origin: center;
+    
+    &:hover {
+      transform: scale(2);
+    }
+  }
 }
 
 @media (max-width: 760px) {
