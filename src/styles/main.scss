@@ -243,7 +243,6 @@ footer {
   }
 
    .experience__container{
-      background-color: rgba($white, 0.8);
       margin: 1rem;
       padding: 1rem;
       border-radius: 0.5rem;
@@ -255,7 +254,6 @@ footer {
         margin: 1rem;
         padding: inherit;
         border-radius: 0.5rem;
-        box-shadow: 0 4px 6px 6px $footer-color;
 
         ul{
           padding: 0;
@@ -264,7 +262,6 @@ footer {
     }
 
   .skills__container {
-    background-color: rgba($white, 0.8);
     padding: 2rem;
     margin: 1rem;
     display: grid;
@@ -272,7 +269,6 @@ footer {
     gap: 2rem;
     border-radius: 0.5rem;
     grid-area: skills;
-    box-shadow: 0 4px 6px 6px $footer-color;
     
 
     .skills__card {
@@ -325,8 +321,6 @@ footer {
 
     .funfacts__container{
       grid-area: funfacts;
-      background-color: rgba($white, 0.8);
-      box-shadow: 0 4px 6px 6px $footer-color;
       border-radius: 1rem;
 
       .funfacts__cards{
@@ -662,7 +656,8 @@ footer {
     transform-origin: center;
     
     &:hover {
-      transform: scale(2);
+      transform: scale(1.2);
+      color: $react-icon;
     }
   }
 }

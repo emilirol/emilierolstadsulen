@@ -235,7 +235,6 @@ footer .site__footer--contact .react__icon {
   margin: auto;
 }
 #about .experience__container {
-  background-color: rgba(255, 255, 255, 0.8);
   margin: 1rem;
   padding: 1rem;
   border-radius: 0.5rem;
@@ -247,14 +246,12 @@ footer .site__footer--contact .react__icon {
   margin: 1rem;
   padding: inherit;
   border-radius: 0.5rem;
-  box-shadow: 0 4px 6px 6px #baaba4;
 }
 #about .experience__container .experience__education ul,
 #about .experience__container .experience__work ul {
   padding: 0;
 }
 #about .skills__container {
-  background-color: rgba(255, 255, 255, 0.8);
   padding: 2rem;
   margin: 1rem;
   display: grid;
@@ -262,7 +259,6 @@ footer .site__footer--contact .react__icon {
   gap: 2rem;
   border-radius: 0.5rem;
   grid-area: skills;
-  box-shadow: 0 4px 6px 6px #baaba4;
 }
 #about .skills__container .skills__card {
   background: rgba(162, 175, 149, 0.6);
@@ -303,8 +299,6 @@ footer .site__footer--contact .react__icon {
 }
 #about .funfacts__container {
   grid-area: funfacts;
-  background-color: rgba(255, 255, 255, 0.8);
-  box-shadow: 0 4px 6px 6px #baaba4;
   border-radius: 1rem;
 }
 #about .funfacts__container .funfacts__cards {
@@ -579,7 +573,8 @@ footer .site__footer--contact .react__icon {
     transform-origin: center;
   }
   .zoom-out:hover {
-    transform: scale(2);
+    transform: scale(1.2);
+    color: rgba(236, 15, 125, 0.6196078431);
   }
 }
 @media (max-width: 760px) {
