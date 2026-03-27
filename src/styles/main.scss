@@ -230,13 +230,16 @@ footer {
       grid-area: personal;
 
       #about-image{
-        width: 15rem;
-        margin: 0;
+        height: 20rem;
         box-shadow: 0 4px 6px 6px $footer-color;
+        display: inherit;
+        margin: auto 2rem;
+        justify-content: center;
+        border-radius: 1rem;
       }
 
       p{
-        padding: 0 5rem;
+        padding: 0 2rem;
         display: inherit;
         margin: auto;
       }
@@ -265,7 +268,6 @@ footer {
     padding: 2rem;
     margin: 1rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
     gap: 2rem;
     border-radius: 0.5rem;
     grid-area: skills;
@@ -444,41 +446,52 @@ footer {
     max-width: 80rem;
     margin: 0 auto;
     padding: 0.5rem;
-    background-color: white;
     border-radius: 1rem;
-    box-shadow: 0 4px 6px 6px $footer-color; 
-
     grid-area: carousel;
 
     .carousel__btn {
-        grid-area: prev;
-        width: 2.5rem;
-        height: 2.5rem;
-        border: 0;
-        border-radius: 2rem;
-        cursor: pointer;
-        font-size: 2rem;
-        line-height: 1.5;
-        background-color: $card-color;
+      grid-area: prev;
+      width: 2.5rem;
+      height: 2.5rem;
+      border: 0;
+      border-radius: 2rem;
+      cursor: pointer;
+      font-size: 2rem;
+      line-height: 1.5;
+      background-color: $card-color;
       }
 
       .carousel__btn:last-of-type {
         grid-area: next;
       }
-      
-      img,
-      video {
-        max-width: 100%;
-        max-height: 100%;
-        display: block;
-        object-fit: cover;
-        border-radius: 1rem;
-        box-shadow: 0 4px 6px 6px $footer-color; 
+
+      .carousel__frame{
         grid-area: frame;
-        border-radius: 0.5rem;
+        width: 100%;
+        height: clamp(45rem, 55vw, 45rem);
         overflow: hidden;
-        margin: 0;
-    }
+
+        .carousel__figure{
+            width: 100%;
+            height: 100%;
+            margin: 0;
+          }
+
+          img,
+          video {
+            width: 100%;
+            height: 100%;
+            display: block;
+            box-shadow: 0 4px 6px 6px $footer-color; 
+            overflow: hidden;
+            margin: 0;
+            object-position: center;
+            object-fit: contain;
+
+            }
+          }
+      
+      
 
     .carousel__dots {
       grid-area: dots;
@@ -597,8 +610,8 @@ footer {
   height: 40rem;
   display: flex;
   flex-direction:column;
-  align-items: center;
   justify-content: center;
+  margin: 0 10rem;
 
   .contact__social{
       display: inherit;
@@ -659,6 +672,15 @@ footer {
       transform: scale(1.2);
       color: $react-icon;
     }
+  }
+
+  .funfact__icon{
+
+    &.--llama{
+            font-size: 3rem;
+            left: 7rem;
+            top: 4rem;
+          }
   }
 }
 
@@ -740,13 +762,11 @@ footer {
     .about__personal{
       padding: 0.5rem;
       border-radius: 1rem;
-      box-shadow: 0 4px 6px 6px $footer-color;
 
       #about-image{
       width: 10rem;
       display: block;
       margin: auto;
-      border-radius: 1rem;
       }
 
       p{
@@ -755,11 +775,9 @@ footer {
     }
 
     .experience__container{
-      background-color: rgba($white, 0.8);
       margin: 1rem;
       padding: 1rem;
       border-radius: 0.5rem;
-      box-shadow: 0 4px 6px 6px $footer-color;
 
       .experience__education,
       .experience__work{
@@ -767,7 +785,6 @@ footer {
         margin: 1rem;
         padding: inherit;
         border-radius: 0.5rem;
-        box-shadow: inherit;
 
         ul{
           padding: 0;
@@ -775,7 +792,6 @@ footer {
       }
     }
     .skills__container{
-      box-shadow: 0 4px 6px 6px $footer-color;
       grid-template-columns: 1fr;
       padding: 1rem;
       margin: 0.5rem;
@@ -819,7 +835,6 @@ footer {
         margin: 0.5rem;
         padding: 0.8rem;
         position: relative;
-        box-shadow: 0 4px 6px 6px $footer-color;
 
         .funfact__icon{
         
@@ -831,6 +846,12 @@ footer {
           &.--lego{
             right: 1rem;
             top: 3rem;
+          }
+
+          &.--llama{
+            font-size: 3rem;
+            left: 5rem;
+            top: 5rem;
           }
         }
       }
@@ -861,11 +882,28 @@ footer {
       width: 100%;
       max-width: 100%;
 
+      .carousel__frame {
+        grid-area: frame;
+        width: 100%;
+        height: clamp(16rem, 55vw, 22rem);
+        overflow: hidden;
+        border-radius: 0.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .carousel__figure {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+      }
+
       .carousel__dots {
         grid-area: dots;
         justify-content: center;
-        
-        .carousel__dot{
+
+        .carousel__dot {
           height: 0.5rem;
         }
       }
@@ -875,9 +913,8 @@ footer {
         height: 1.5rem;
         font-size: 1.5rem;
 
-        .carousel__btn--icon{
+        .carousel__btn--icon {
           font-size: 1rem;
-          
         }
 
         &:first-of-type {
@@ -893,13 +930,13 @@ footer {
 
       img,
       video {
-        grid-area: frame;
         width: 100%;
-        height: auto;
-        max-width: 100%;
-        object-fit: cover;
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
         display: block;
         border-radius: 0.5rem;
+        margin: 0;
       }
     }
 

@@ -15,8 +15,6 @@ export default function Contact(){
                         <p>Kjære du som har "forvillet" deg inn på denne nettsiden!</p>
                         <p>Har du et prosjekt eller en idé innen UX-design og/eller utvikling?
                             Jeg hjelper deg gjerne med et eksisterende prosjekt eller om du er på utkikk etter noe helt nytt.
-                        </p>
-                        <p>
                             Kontakt meg gjerne via sosiale media eller send meg en mail for en uforpliktende samtale.
                         </p>
                         <p>Ser fram til å høre fra deg!</p>

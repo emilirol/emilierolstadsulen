@@ -225,12 +225,15 @@ footer .site__footer--contact .react__icon {
   grid-area: personal;
 }
 #about .about__personal #about-image {
-  width: 15rem;
-  margin: 0;
+  height: 20rem;
   box-shadow: 0 4px 6px 6px #baaba4;
+  display: inherit;
+  margin: auto 2rem;
+  justify-content: center;
+  border-radius: 1rem;
 }
 #about .about__personal p {
-  padding: 0 5rem;
+  padding: 0 2rem;
   display: inherit;
   margin: auto;
 }
@@ -255,7 +258,6 @@ footer .site__footer--contact .react__icon {
   padding: 2rem;
   margin: 1rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
   gap: 2rem;
   border-radius: 0.5rem;
   grid-area: skills;
@@ -398,9 +400,7 @@ footer .site__footer--contact .react__icon {
   max-width: 80rem;
   margin: 0 auto;
   padding: 0.5rem;
-  background-color: white;
   border-radius: 1rem;
-  box-shadow: 0 4px 6px 6px #baaba4;
   grid-area: carousel;
 }
 .project__page--card .carousel .carousel__btn {
@@ -417,19 +417,29 @@ footer .site__footer--contact .react__icon {
 .project__page--card .carousel .carousel__btn:last-of-type {
   grid-area: next;
 }
-.project__page--card .carousel img,
-.project__page--card .carousel video {
-  max-width: 100%;
-  max-height: 100%;
-  display: block;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 1rem;
-  box-shadow: 0 4px 6px 6px #baaba4;
+.project__page--card .carousel .carousel__frame {
   grid-area: frame;
-  border-radius: 0.5rem;
+  width: 100%;
+  height: clamp(45rem, 55vw, 45rem);
+  overflow: hidden;
+}
+.project__page--card .carousel .carousel__frame .carousel__figure {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+.project__page--card .carousel .carousel__frame img,
+.project__page--card .carousel .carousel__frame video {
+  width: 100%;
+  height: 100%;
+  display: block;
+  box-shadow: 0 4px 6px 6px #baaba4;
   overflow: hidden;
   margin: 0;
+  -o-object-position: center;
+     object-position: center;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .project__page--card .carousel .carousel__dots {
   grid-area: dots;
@@ -525,8 +535,8 @@ footer .site__footer--contact .react__icon {
   height: 40rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  margin: 0 10rem;
 }
 .contact__container .contact__social {
   display: inherit;
@@ -575,6 +585,11 @@ footer .site__footer--contact .react__icon {
   .zoom-out:hover {
     transform: scale(1.2);
     color: rgba(236, 15, 125, 0.6196078431);
+  }
+  .funfact__icon.--llama {
+    font-size: 3rem;
+    left: 7rem;
+    top: 4rem;
   }
 }
 @media (max-width: 760px) {
@@ -633,23 +648,19 @@ footer .site__footer--contact .react__icon {
   #about .about__personal {
     padding: 0.5rem;
     border-radius: 1rem;
-    box-shadow: 0 4px 6px 6px #baaba4;
   }
   #about .about__personal #about-image {
     width: 10rem;
     display: block;
     margin: auto;
-    border-radius: 1rem;
   }
   #about .about__personal p {
     padding: 1.5rem;
   }
   #about .experience__container {
-    background-color: rgba(255, 255, 255, 0.8);
     margin: 1rem;
     padding: 1rem;
     border-radius: 0.5rem;
-    box-shadow: 0 4px 6px 6px #baaba4;
   }
   #about .experience__container .experience__education,
   #about .experience__container .experience__work {
@@ -657,14 +668,12 @@ footer .site__footer--contact .react__icon {
     margin: 1rem;
     padding: inherit;
     border-radius: 0.5rem;
-    box-shadow: inherit;
   }
   #about .experience__container .experience__education ul,
   #about .experience__container .experience__work ul {
     padding: 0;
   }
   #about .skills__container {
-    box-shadow: 0 4px 6px 6px #baaba4;
     grid-template-columns: 1fr;
     padding: 1rem;
     margin: 0.5rem;
@@ -698,7 +707,6 @@ footer .site__footer--contact .react__icon {
     margin: 0.5rem;
     padding: 0.8rem;
     position: relative;
-    box-shadow: 0 4px 6px 6px #baaba4;
   }
   #about .funfacts__container .funfacts__cards .funfact__icon.--nurse {
     font-size: 3rem;
@@ -707,6 +715,11 @@ footer .site__footer--contact .react__icon {
   #about .funfacts__container .funfacts__cards .funfact__icon.--lego {
     right: 1rem;
     top: 3rem;
+  }
+  #about .funfacts__container .funfacts__cards .funfact__icon.--llama {
+    font-size: 3rem;
+    left: 5rem;
+    top: 5rem;
   }
   /* ------ Prosjekter --------- */
   .project-title {
@@ -727,6 +740,21 @@ footer .site__footer--contact .react__icon {
     gap: 0.3rem;
     width: 100%;
     max-width: 100%;
+  }
+  .project__page--card .carousel .carousel__frame {
+    grid-area: frame;
+    width: 100%;
+    height: clamp(16rem, 55vw, 22rem);
+    overflow: hidden;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .project__page--card .carousel .carousel__figure {
+    width: 100%;
+    height: 100%;
+    margin: 0;
   }
   .project__page--card .carousel .carousel__dots {
     grid-area: dots;
@@ -753,14 +781,15 @@ footer .site__footer--contact .react__icon {
   }
   .project__page--card .carousel img,
   .project__page--card .carousel video {
-    grid-area: frame;
     width: 100%;
-    height: auto;
-    max-width: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
+    height: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+    -o-object-position: center;
+       object-position: center;
     display: block;
     border-radius: 0.5rem;
+    margin: 0;
   }
   .project__page--card .project {
     width: 100%;

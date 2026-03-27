@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { projects } from "../../data/projects.js";
 import { TiArrowBack } from "react-icons/ti";
@@ -10,41 +10,12 @@ export default function ProjectPage() {
   const { slug } = useParams();
   const project = projects.find((p) => p.slug === slug);
   const [index, setIndex] = useState(0);
-  const intervalRef = useRef(null);
 
   if (!project) return <p>Prosjekt ikke funnet</p>;
 
   const items = project.media ?? [];
   const hasMedia = items.length > 0;
   const current = items[index];
-
-  const startAutoplay = () => {
-    if (!items.length) return;
-
-    clearInterval(intervalRef.current);
-
-    intervalRef.current = setInterval(() => {
-      setIndex((prevIndex) => (prevIndex + 1) % items.length);
-    }, 3000); 
-  };
-
-  const stopAutoplay = () => {
-    clearInterval(intervalRef.current);
-  };
-
-  useEffect(() => {
-    if (!hasMedia || items.length < 2) return;
-
-    // Ikke autoplay hvis aktivt element er video
-    if (current?.type === "video") {
-      stopAutoplay();
-      return;
-    }
-
-    startAutoplay();
-
-    return () => stopAutoplay();
-  }, [index, hasMedia, items.length, current?.type]);
 
   useEffect(() => {
     setIndex(0);
@@ -75,10 +46,6 @@ export default function ProjectPage() {
           <div
             className="carousel"
             aria-label="Gallery"
-            onMouseEnter={stopAutoplay}
-            onMouseLeave={() => {
-              if (current?.type !== "video") startAutoplay();
-            }}
           >
             <button className="carousel__btn" onClick={prev} aria-label="Forrige">
               <FaArrowLeft className="carousel__btn--icon" />

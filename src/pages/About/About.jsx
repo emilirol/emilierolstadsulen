@@ -4,6 +4,7 @@ import Header from "../../components/Header/Header.jsx";
 import Footer from "../../components/Footer/Footer.jsx";
 import { PiLegoSmileyFill } from "react-icons/pi";
 import { FaUserNurse } from "react-icons/fa";
+import { SiOllama } from "react-icons/si";
 
 export default function About() {
     const birthDate = new Date(1992, 7, 7); 
@@ -140,9 +141,9 @@ export default function About() {
         </div>
 
         <div className="funfacts__container">
-          <h3>
+          <h2>
             Funfacts 
-          </h3>
+          </h2>
 
           <div className="funfacts__cards">
             <p>
@@ -164,6 +165,7 @@ export default function About() {
               Når jeg vokser opp, ønsker jeg meg ett småbruk hvor jeg kan ha
               kyllinger og alpakkaer.
             </p>
+            <SiOllama  className="funfact__icon --llama"/>
           </div>
         </div>
       </main>
