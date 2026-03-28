@@ -1,9 +1,9 @@
 export const projects = [
     {
-    slug: "pawpartner",              // brukes i URL/routing og som unik id
+    slug: "pawpartner",              
     title: "Pawpartner - Web of Things høst 2025",
 
-    thumbnail: "/project-images/pawpartner.webp", // kan være path eller importert bilde
+    thumbnail: "/project-images/pawpartner.webp", 
 
     media: [
       { type: "image", src: "/project-images/pawpartner.webp"},
