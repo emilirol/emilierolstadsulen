@@ -107,8 +107,8 @@ export default function About() {
                 <h3>Utdannelse</h3>
                     <ul>
                         <li>2023 - 2026 : Bachelor i webutvikling</li>
-                        <li>2013 - 2016 : Bachelor i sykepleie</li>
                         <li>2019 - 2021 : Videreutdannelse i psykisk helsearbeid</li>
+                        <li>2013 - 2016 : Bachelor i sykepleie</li>
                     </ul>
             </div>
             <div className="experience__work">

@@ -12,7 +12,7 @@ export default function Contact(){
             <Header />
                 <div className="contact__container">
                     <h1>Kontakt meg!</h1>
-                        <p>Kjære du som har "forvillet" deg inn på denne nettsiden!</p>
+                        <p>Kjære du som har «forvillet» deg inn på denne nettsiden!</p>
                         <p>Har du et prosjekt eller en idé innen UX-design og/eller utvikling?
                             Jeg hjelper deg gjerne med et eksisterende prosjekt eller om du er på utkikk etter noe helt nytt.
                             Kontakt meg gjerne via sosiale media eller send meg en mail for en uforpliktende samtale.
